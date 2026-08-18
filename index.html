@@ -35,10 +35,10 @@
             --bg-secondary: #ffffff;
             --bg-tertiary: #f1f3f5;
             --bg-card: #ffffff;
-            --text-primary: #1a1a2e;
-            --text-secondary: #4a4a6a;
-            --text-muted: #6c757d;
-            --border-color: rgba(0,0,0,0.08);
+            --text-primary: #0f0f1e;
+            --text-secondary: #363654;
+            --text-muted: #5a6470;
+            --border-color: rgba(0,0,0,0.1);
             --accent-red: #e20613;       /* Merah khas JKT48 */
             --accent-red-hover: #c00511;
             --accent-gold: #d4af37;      /* Emas / Gold */
@@ -47,38 +47,46 @@
             --shadow-card-hover: 0 12px 40px rgba(226,6,19,0.12);
             --glass-bg: rgba(255,255,255,0.7);
             --glass-border: rgba(255,255,255,0.9);
+            --navbar-bg: rgba(250,251,252,0.88);
             --gradient-hero: linear-gradient(135deg, #fff5f5 0%, #ffffff 50%, #fffdf5 100%);
             --status-main-bg: #e20613;
+            --status-main-text: #ffffff;
             --status-regular-bg: #d4af37;
-            --status-trainee-bg: #00FF41;
-            --chip-bg: rgba(226,6,19,0.08);
-            --chip-text: #e20613;
+            --status-regular-text: #1a1a1a;
+            --status-trainee-bg: #00b837;
+            --status-trainee-text: #ffffff;
+            --chip-bg: rgba(226,6,19,0.1);
+            --chip-text: #b80510;
         }
 
         /* ===== VARIABEL WARNA DARK MODE (AKTIF KETIKA CHECKBOX DICENTANG) ===== */
         #theme-toggle:checked ~ * {
             /* PETUNJUK: Ubah kode hex di bawah untuk ganti warna Dark Mode */
-            --bg-primary: #121212;
-            --bg-secondary: #1a1a1a;
-            --bg-tertiary: #242424;
-            --bg-card: #1e1e1e;
-            --text-primary: #f1f3f5;
-            --text-secondary: #adb5bd;
-            --text-muted: #868e96;
-            --border-color: rgba(255,255,255,0.08);
-            --accent-red: #ff1a2e;       /* Merah Neon JKT48 */
+            --bg-primary: #0d0d0d;
+            --bg-secondary: #171717;
+            --bg-tertiary: #1f1f1f;
+            --bg-card: #1a1a1a;
+            --text-primary: #f8f9fa;
+            --text-secondary: #d1d5db;
+            --text-muted: #a0a8b0;
+            --border-color: rgba(255,255,255,0.12);
+            --accent-red: #ff3344;       /* Merah Neon JKT48 */
             --accent-red-hover: #e60017;
-            --accent-gold: #c0c0c0;      /* Perak / Silver */
-            --accent-gold-hover: #a8a8a8;
-            --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
-            --shadow-card-hover: 0 12px 40px rgba(255,26,46,0.2);
-            --glass-bg: rgba(30,30,30,0.6);
-            --glass-border: rgba(255,255,255,0.1);
-            --gradient-hero: linear-gradient(135deg, #1a0505 0%, #121212 50%, #151515 100%);
-            --status-main-bg: #ff1a2e;
-            --status-regular-bg: #c0c0c0;
-            --status-trainee-bg: #39FF14;
-            --chip-bg: rgba(255,26,46,0.15);
+            --accent-gold: #e0e0e0;      /* Perak / Silver cerah */
+            --accent-gold-hover: #bdbdbd;
+            --shadow-card: 0 4px 24px rgba(0,0,0,0.5);
+            --shadow-card-hover: 0 12px 40px rgba(255,51,68,0.25);
+            --glass-bg: rgba(26,26,26,0.75);
+            --glass-border: rgba(255,255,255,0.12);
+            --navbar-bg: rgba(13,13,13,0.88);
+            --gradient-hero: linear-gradient(135deg, #1a0505 0%, #0d0d0d 50%, #121212 100%);
+            --status-main-bg: #ff3344;
+            --status-main-text: #ffffff;
+            --status-regular-bg: #e0e0e0;
+            --status-regular-text: #121212;
+            --status-trainee-bg: #39ff14;
+            --status-trainee-text: #0d0d0d;
+            --chip-bg: rgba(255,51,68,0.2);
             --chip-text: #ff6b7a;
         }
 
@@ -97,6 +105,53 @@
             font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
             font-weight: 800;
             line-height: 1.2;
+            color: var(--text-primary);
+            transition: color 0.5s ease;
+        }
+
+        p, span, li, label, small, div {
+            transition: color 0.5s ease;
+        }
+
+        strong, b {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        a {
+            transition: color 0.3s ease;
+        }
+
+        .text-muted {
+            color: var(--text-muted) !important;
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .text-dark {
+            color: var(--text-primary) !important;
+        }
+
+        .text-light {
+            color: var(--bg-secondary) !important;
+        }
+
+        .bg-light {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        .bg-dark {
+            background-color: var(--bg-primary) !important;
+        }
+
+        .bg-white {
+            background-color: var(--bg-card) !important;
+        }
+
+        .border {
+            border-color: var(--border-color) !important;
         }
 
         /* ===========================================================
@@ -124,7 +179,7 @@
         .theme-label:hover {
             transform: rotate(20deg);
             border-color: var(--accent-red);
-            box-shadow: 0 0 0 3px rgba(226,6,19,0.1);
+            box-shadow: 0 0 0 3px var(--chip-bg);
         }
 
         /* Ikon matahari (tampil saat Light Mode = checkbox BELUM dicentang) */
@@ -132,7 +187,7 @@
             display: block;
             width: 20px;
             height: 20px;
-            fill: #d4af37;
+            fill: var(--accent-gold);
         }
 
         /* Ikon bulan (tampil saat Dark Mode = checkbox SUDAH dicentang) */
@@ -140,7 +195,7 @@
             display: none;
             width: 20px;
             height: 20px;
-            fill: #c0c0c0;
+            fill: var(--accent-gold);
         }
 
         #theme-toggle:checked ~ nav .theme-label .icon-sun { display: none; }
@@ -148,7 +203,7 @@
 
         /* ===== NAVBAR ===== */
         .navbar-custom {
-            background-color: rgba(250,251,252,0.85);
+            background-color: var(--navbar-bg);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
@@ -159,7 +214,7 @@
         }
 
         #theme-toggle:checked ~ .navbar-custom {
-            background-color: rgba(18,18,18,0.85);
+            background-color: var(--navbar-bg);
         }
 
         .logo-hm {
@@ -250,7 +305,7 @@
             border-radius: 999px;
             font-size: 0.85rem;
             font-weight: 700;
-            border: 1px solid rgba(226,6,19,0.15);
+            border: 1px solid var(--border-color);
         }
 
         .hero-badge .pulse-dot {
@@ -589,7 +644,6 @@
             border-radius: 999px;
             font-size: 0.72rem;
             font-weight: 800;
-            color: #fff;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             z-index: 2;
@@ -598,19 +652,20 @@
 
         .oshi-status-badge.main {
             background: var(--status-main-bg);
+            color: var(--status-main-text);
             box-shadow: 0 4px 12px rgba(226,6,19,0.4);
         }
 
         .oshi-status-badge.regular {
             background: var(--status-regular-bg);
-            color: #1a1a1a;
+            color: var(--status-regular-text);
             box-shadow: 0 4px 12px rgba(212,175,55,0.4);
         }
 
         .oshi-status-badge.trainee {
             background: var(--status-trainee-bg);
-            color: #1a1a1a;
-            box-shadow: 0 4px 16px rgba(0, 255, 65, 0.6), 0 0 30px rgba(0, 255, 65, 0.3);
+            color: var(--status-trainee-text);
+            box-shadow: 0 4px 16px rgba(0, 184, 55, 0.5), 0 0 20px rgba(0, 184, 55, 0.25);
         }
 
         .oshi-body {
