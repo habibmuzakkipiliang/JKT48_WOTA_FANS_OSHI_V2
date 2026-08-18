@@ -50,6 +50,7 @@
             --gradient-hero: linear-gradient(135deg, #fff5f5 0%, #ffffff 50%, #fffdf5 100%);
             --status-main-bg: #e20613;
             --status-regular-bg: #d4af37;
+            --status-trainee-bg: #00FF41;
             --chip-bg: rgba(226,6,19,0.08);
             --chip-text: #e20613;
         }
@@ -76,6 +77,7 @@
             --gradient-hero: linear-gradient(135deg, #1a0505 0%, #121212 50%, #151515 100%);
             --status-main-bg: #ff1a2e;
             --status-regular-bg: #c0c0c0;
+            --status-trainee-bg: #39FF14;
             --chip-bg: rgba(255,26,46,0.15);
             --chip-text: #ff6b7a;
         }
@@ -603,6 +605,12 @@
             background: var(--status-regular-bg);
             color: #1a1a1a;
             box-shadow: 0 4px 12px rgba(212,175,55,0.4);
+        }
+
+        .oshi-status-badge.trainee {
+            background: var(--status-trainee-bg);
+            color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0, 255, 65, 0.6), 0 0 30px rgba(0, 255, 65, 0.3);
         }
 
         .oshi-body {
@@ -1354,8 +1362,8 @@
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="oshi-card">
                         <div class="oshi-img-wrap">
-                            <span class="oshi-status-badge regular">TRAINEE</span>
-                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=MikaelaKusjanto&backgroundColor=e8f5e9&clothingType=casual&clothingColor=2e7d32"
+                            <span class="oshi-status-badge trainee">TRAINEE</span>
+                            <img src="https://image.idntimes.com/post/20250806/snapinsta_437c1ed9-a3db-4e71-aa89-c384ee2965ab.jpg"
                                  alt="Mikaela JKT48">
                         </div>
                         <div class="oshi-body">
@@ -1370,14 +1378,14 @@
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="oshi-card">
                         <div class="oshi-img-wrap">
-                            <span class="oshi-status-badge regular">TRAINEE</span>
+                            <span class="oshi-status-badge trainee">TRAINEE</span>
                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=EkinJacqueline&backgroundColor=eceff1&clothingType=casual&hairColor=blondeGolden"
                                  alt="Ekin JKT48">
                         </div>
                         <div class="oshi-body">
                             <h5 class="oshi-name">Ekin JKT48</h5>
                             <div class="oshi-role">Trainee JKT48</div>
-                            <p class="oshi-desc"><b>acqueline Immanuela Jonathan</b>, pribadi hangat dan ramah.</p>
+                            <p class="oshi-desc"><b>Jacqueline Immanuela Jonathan</b>, pribadi hangat dan ramah.</p>
                         </div>
                     </div>
                 </div>
@@ -1386,7 +1394,7 @@
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
                     <div class="oshi-card">
                         <div class="oshi-img-wrap">
-                            <span class="oshi-status-badge regular">TRAINEE</span>
+                            <span class="oshi-status-badge trainee">TRAINEE</span>
                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=NurIntan&backgroundColor=fff3e0&clothingType=casual&clothingColor=e65100"
                                  alt="Intan JKT48">
                         </div>
